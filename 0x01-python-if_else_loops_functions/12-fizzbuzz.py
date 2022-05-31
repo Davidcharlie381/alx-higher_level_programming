@@ -6,10 +6,10 @@ B = "Buzz"
 def fizzbuzz():
     for num in range(1, 101):
         if (num % 3 and num % 5):
-            print("{}{}".format(F, B), end='')
+            print("%s%s" % (F, B), end=' ')
         elif num % 3:
-            print("{}".format(F), end='')
+            print("%s" % (F), end=' ')
         elif num % 5:
-            print("{}".format(B), end='')
+            print("%s" % (B), end=' ')
         else:
-            print("{:d}".format(num), end='')
+            print("%d" % (num), end=' ')
