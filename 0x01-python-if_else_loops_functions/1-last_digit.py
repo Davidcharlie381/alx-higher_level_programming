@@ -7,7 +7,7 @@ if number >= 0:
 else:
     last_digit = ((number * -1) % 10) * -1
 
-message = "Last digit of {} is {} and is ".format(number, last_digit)
+message = "Last digit of {} is {}".format(number, last_digit)
 
 if last_digit > 5:
     print(message, "and is greater than 5")
