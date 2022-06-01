@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-F = "Fizz"
-B = "Buzz"
+FIZZ = "Fizz"
+BUZZ = "Buzz"
 
 
 def fizzbuzz():
-    for num in range(1, 101):
-        if (num % 3 and num % 5):
-            print("%s%s" % (F, B), end=' ')
-        elif (num % 3):
-            print("%s" % (F), end=' ')
-        elif (num % 5):
-            print("%s" % (B), end=' ')
+    for number in range(1, 101):
+        if (number % 3 and number % 5):
+            print("%s%s" % (FIZZ, BUZZ), end=' ')
+        elif (number % 3):
+            print("%s" % (FIZZ), end=' ')
+        elif (number % 5):
+            print("%s" % (BUZZ), end=' ')
         else:
-            print("%d" % (num), end=' ')
+            print("%d" % (number), end=' ')
