@@ -1,23 +1,29 @@
 #!/usr/bin/python3
 """
-This module is composed by a function that prints a square with the character #
+Module composed by a function that prints 2 new lines after ".?:" characters
 """
 
 
-def print_square(size):
-    """ Function that prints a square with the character #
+def text_indentation(text):
+    """ Function that prints 2 new lines after ".?:" characters
     Args:
-        size: size of the square printed
+        text: input string
     Returns:
         No return
     Raises:
-        TypeError: If size is not an integer number
+        TypeError: If text is not a string
     """
 
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
+    if type(text) is not str:
+        raise TypeError("text must be a string")
 
-    for i in range(size):
-        print("#" * size)
+    s = text[:]
+
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
+
+    print(s[:-3], end="")
